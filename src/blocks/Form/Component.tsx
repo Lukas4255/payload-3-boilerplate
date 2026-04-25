@@ -1,5 +1,6 @@
 'use client'
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
+import type { DefaultTypedEditorState } from '@payloadcms/richtext-lexical'
 
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useState } from 'react'
@@ -26,9 +27,7 @@ export type FormBlockType = {
   blockType?: 'formBlock'
   enableIntro: boolean
   form: FormType
-  introContent?: {
-    [k: string]: unknown
-  }[]
+  introContent?: DefaultTypedEditorState
 }
 
 export const FormBlock: React.FC<
